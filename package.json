@@ -3,12 +3,12 @@
     "description": "CDB (Constant Database) integration for node",
     "version": "0.0.1b",
     "author" : { 
-		"name":"John Norton",
-		"email":"jukebox42@gmail.com"
+		"name": "John Norton",
+		"email": "jukebox42@gmail.com"
 	},
-	"contributers":[
+	"contributors": [
 		{
-			"name":"Matt Horsfall"
+			"name":"Matthew Horsfall"
 		}
 	],
     "repository" : {
@@ -16,7 +16,7 @@
         "url" : "http://github.com/jukebox42/cdblib.git"
     },
     "scripts":{
-        "test": "nodeunit t/"
+        "test": "nodeunit t/",
 		"preinstall": "node-gyp reinstall"
     },
     "main" : "./lib/cdblib",
@@ -32,8 +32,5 @@
     "engine": {
         "node": ">=0.8.*"
     },
-	"os": {
-		"linux"
-	},
     "keywords": ["cdb", "constant database"]
 }
