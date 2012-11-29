@@ -1,8 +1,8 @@
 {
-    "name": "cdblib",
-    "description": "CDB (Constant Database) integration for node",
-    "version": "0.0.1b",
-    "author" : { 
+	"name": "cdblib",
+	"description": "CDB (Constant Database) integration for node",
+	"version": "0.0.1b",
+	"author" : { 
 		"name": "John Norton",
 		"email": "jukebox42@gmail.com"
 	},
@@ -11,26 +11,26 @@
 			"name":"Matthew Horsfall"
 		}
 	],
-    "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/jukebox42/cdblib.git"
-    },
-    "scripts":{
-        "test": "nodeunit t/",
+	"repository" : {
+		"type" : "git",
+		"url" : "http://github.com/jukebox42/cdblib.git"
+	},
+	"scripts":{
+		"test": "nodeunit t/",
 		"preinstall": "node-gyp reinstall"
-    },
-    "main" : "./lib/cdblib",
-    "licenses" : [
-        {
-            "type": "MIT",
-            "url": "http://github.com/jukebox42/cdblib/LICENSE"
-        }
-    ],
-    "devDependencies": {
+	},
+	"main" : "./lib/cdblib",
+	"licenses" : [
+		{
+			"type": "MIT",
+			"url": "http://github.com/jukebox42/cdblib/LICENSE"
+		}
+	],
+	"devDependencies": {
 		"nodeunit": "*"
-    },
-    "engine": {
-        "node": ">=0.8.*"
-    },
-    "keywords": ["cdb", "constant database"]
+	},
+	"engine": {
+		"node": ">=0.8.*"
+	},
+	"keywords": ["cdb", "constant database"]
 }

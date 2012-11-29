@@ -9,15 +9,16 @@ issues will be addressed in future versions.
 
 ## Installation
 
+Dependencies:
+
+	sudo apt-get install libcdb-dev
+
 Install through NPM
 
 	I have not added cdblib to npm yet. Will add as soon as I address the note.
 
 Install through git (*nux only)
 
-	sudo apt-get install libcdb-dev
-	checkout package to node_modules
-	cd PACKAGE_DIR/lib
 	node-gyp configure
 	node-gyp build
 

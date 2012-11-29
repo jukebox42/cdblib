@@ -2,7 +2,7 @@
 	"targets": [
 		{
 			"target_name": "cdblib",
-			"sources": [ "cdblib_module.cc", "cdblib.cc" ],
+			"sources": [ "lib/cdblib_module.cc", "lib/cdblib.cc" ],
 			"conditions" : [
 				[
 					'OS=="linux"', {
