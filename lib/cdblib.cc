@@ -50,8 +50,10 @@ Handle<Value> CDBLib::New(const Arguments& args) {
 	}
 
 	// Allocate contect to hold information about the cdb
-	cdb_init(&obj->context, fileno(obj->filehandler));
-	
+	if (cdb_init(&obj->context, fileno(obj->filehandler)) == -1) {
+		ThrowException(Exception::TypeError(String::New("CDB malformed in cdb_init")));
+	}
+
 	obj->Wrap(args.This());
 
 	return args.This();
@@ -69,7 +71,9 @@ Handle<Value> CDBLib::get(const Arguments& args) {
 
 	String::Utf8Value utf8_value(args[0]);
 
-	cdb_find(&obj->context, *utf8_value, strlen(*utf8_value));
+	if (cdb_find(&obj->context, *utf8_value, strlen(*utf8_value)) == -1) {
+		ThrowException(Exception::TypeError(String::New("CDB malformed in cdb_find")));
+	}
 
 	int row_pos = cdb_datapos(&obj->context);
 	int row_len = cdb_datalen(&obj->context);
@@ -78,7 +82,7 @@ Handle<Value> CDBLib::get(const Arguments& args) {
 
 	
 	if(cdb_read(&obj->context, row, row_len, row_pos) == -1) {
-		ThrowException(Exception::TypeError(String::New("CDB malformed")));
+		ThrowException(Exception::TypeError(String::New("CDB malformed in cdb_read")));
 		return scope.Close(Undefined());
 	}
 

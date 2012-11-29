@@ -81,7 +81,7 @@ exports["Basic Test"] = {
 		} catch(err) {
 			fell_in_catch = true;
 			test.ok(fell_in_catch, 'Hit the catch block');
-			test.equal(err.message, 'CDB malformed', 'Got correct error message');
+			test.equal(err.message, 'CDB malformed in cdb_init', 'Got correct error message');
 			test.done();
 		}
 	},
